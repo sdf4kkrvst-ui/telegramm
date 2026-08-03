@@ -18,11 +18,12 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Post to Telegram
+      - name: Post to Telegram (AI-generated, fallback to content bank)
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL: '@allbegoods'
-        run: python post.py
+        run: python generate_and_post.py || python post.py
 
       - name: Commit updated state
         run: |
