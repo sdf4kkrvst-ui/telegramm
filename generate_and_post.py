@@ -29,6 +29,9 @@ PHOTO_POOL = {
     "animals": ["https://images.unsplash.com/photo-1563551937069-caa966ba3aa8?fm=jpg&q=70&w=1280&auto=format&fit=crop"],
     "history": ["https://images.unsplash.com/photo-1775229106888-dca42d0c9f4f?fm=jpg&q=70&w=1280&auto=format&fit=crop"],
     "sport": ["https://images.unsplash.com/photo-1461896836934-ffe607ba8211?fm=jpg&q=70&w=1280&auto=format&fit=crop"],
+    "science": ["https://images.unsplash.com/photo-1758206523826-a65d4cf070aa?fm=jpg&q=70&w=1280&auto=format&fit=crop"],
+    "psychology": ["https://images.unsplash.com/photo-1559757296-c68c34d39551?fm=jpg&q=70&w=1280&auto=format&fit=crop"],
+    "humor": ["https://images.unsplash.com/photo-1582298538104-fe2e74c27f59?fm=jpg&q=70&w=1280&auto=format&fit=crop"],
 }
 
 SYSTEM_PROMPT = """Ты помогаешь вести Telegram-канал @allbegoods — общая тематика "всякая всячина" (новости, факты, юмор, разное) для русскоязычной аудитории в России.
@@ -38,7 +41,7 @@ SYSTEM_PROMPT = """Ты помогаешь вести Telegram-канал @allbe
 
 Правила:
 1. category должна быть одной из: space, science, history, nature, animals, food, tech, sport, psychology, humor.
-2. use_photo: true разрешено ТОЛЬКО для категорий space, food, tech, nature, animals, history, sport — и только если тема достаточно общая, чтобы иллюстрироваться нейтральной фотографией (не конкретное свежее событие). Для science, psychology, humor всегда use_photo: false.
+2. use_photo: true можно ставить для любой из этих категорий, если тема достаточно общая, чтобы иллюстрироваться нейтральной фотографией (не конкретное свежее событие).
 3. Текст — ОРИГИНАЛЬНЫЙ, своими словами. НЕ копируй дословно ничьи тексты. Если нужна цитата — короче 15 слов, с указанием источника.
 4. КРИТИЧНО — соответствие законодательству РФ: категорически ИЗБЕГАЙ тем: политика и предвыборная агитация; военные действия/спецоперация и любая позиция по ним; критика властей/армии/госсимволики; ЛГБТ в любом контексте; оскорбление религиозных чувств; пропаганда наркотиков/экстремизма/терроризма; иностранные агенты/нежелательные организации. При малейшем сомнении в теме — выбери другую, однозначно безопасную и нейтральную.
 5. Тон — живой, дружелюбный, короткий.
