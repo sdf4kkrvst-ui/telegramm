@@ -1,8 +1,11 @@
 name: Telegram Autopost
 
 on:
-  schedule:
-    - cron: '3 * * * *'
+  # Scheduling is handled by an external cron (cron-job.org) hitting the
+  # workflow_dispatch API on an hourly basis — GitHub's own `schedule:`
+  # trigger is unreliable for low-traffic repos (can silently skip runs
+  # for hours). workflow_dispatch below is what that external cron calls,
+  # and also lets us trigger a run manually from the Actions tab.
   workflow_dispatch: {}
 
 permissions:
